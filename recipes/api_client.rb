@@ -19,5 +19,5 @@
 
 execute "install sdc npm package" do
   command "npm install smartdc -g"
-  not_if "sdc-listmachines --help"
+  not_if "which sdc-listmachines && sdc-listmachines --help"
 end
